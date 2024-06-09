@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap');
+
+  :root {
+    font-family: 'Oswald', sans-serif;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: normal;
+  }
+
+html{
+  scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+  --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar{
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+}
+
+#navbar::before{
+  content: "";
+  background-color: black;
+  position: absolute;
+  top:0px;
+  left:0px;
+  height: 100%;
+  width:100%;
+  z-index: -1;
+  opacity: 1;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+  margin: 10px 34px;
+  color: white;
+}
+
+#logo img{
+  height: 59px;
+  margin: 3px 6px;
+}
+
+
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#navbar ul li{ 
+  list-style: none;
+  font-size: 1.3rem;
+}
+
+#navbar ul li a{
+  color: white;
+  display: block;
+  padding: 3px 22px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+#navbar ul li a:hover{
+  color: rgb(104, 97, 97);
+  /* background-color: white; */
+  transition: .5s;
+}
+
+/* Home Section */
+#home{
+  display: flex;
+  flex-direction: column;
+  padding:3px 200px;
+  height: 710px;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+#home::before{ 
+  content: "";
+  position: absolute;
+  /* background: url('bg.jpg') no-repeat center center/cover; */
+  height: 710px;
+  top:0px;
+  left:0px;
+  width: 100%;
+  z-index: -1;
+  opacity:0.5;
+}
+
+#home h1{
+  color:rgb(255, 255, 255);
+  text-align: center;
+}
+
+#home p{
+  color:rgb(79, 70, 70);
+  text-align: center;
+  font-size: 1.5rem;
+}
+/* Services Section */
+
+#services{
+  background-color: black;
+  /* margin: 34px; */
+  display: flex;
+  padding: 40px;
+}
+#services .box{ 
+  border: 2px solid rgb(255, 255, 255);
+  padding: 34px;
+  margin: 2px 55px;
+  border-radius: 28px;
+  background: #000000;
+  margin-bottom: 20px;
+}
+
+#services .box p{
+  color: white;
+}
+
+#services .box img{ 
+ height: 160px;
+ margin: auto;
+ display: block;
+}
+
+footer{
+  background: black;
+  color: white;
+  padding: 9px 20px;
+}
+
+/* Utility Classes */
+.h-primary{
+  color: white;
+  font-size: 3.8rem;
+  padding: 12px;
+}
+
+.h-secondary{
+  color: white;
+  font-size: 2.3rem;
+  padding: 12px;
+}
+
+.btn{
+  padding: 6px 20px;
+  border: 2px solid white;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  margin: 17px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  cursor:pointer;
+}
+
+.center{
+  text-align: center;
+}
+
+
+section.contact {
+  background-color: #000000;
+  padding: 40px 0;
+  color: #333;
+  text-align: center;
+}
+
+.contact h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* Contact container styling */
+.contactcont, #cont2, #cont3 {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 10px;
+}
+
+/* About Company styling */
+.contactcont {
+  text-align: left;
+}
+
+.contactcont p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 10px 0;
+  color: white;
+}
+
+.contactcont ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contactcont li {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.contactcont li img {
+  width: 30px;
+  height: 30px;
+  filter: invert(100%);
+  margin-right: 5px;
+}
+
+/* Feel Free to reach out styling */
+#cont2 a {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #ffffff;
+  margin: 5px 0; /* Reduced margin */
+  text-decoration: none;
+}
+
+#cont2 a img {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  filter: invert(100%);
+}
+
+/* Opening Hours styling */
+#cont3 table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+#cont3 td {
+  padding: 10px;
+  border: 1px solid #ffffff;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .contactcont, #cont2, #cont3 {
+      width: 90%;
+      margin: 0 auto 20px;
+  }
+  .box {
+    width: 90%;
+  }
+  .numbers-counter .numbers-list {
+      flex-direction: column;
+      gap: 20px;
+  }
+}
+
+
+.data{
+  background-color: #000000;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.numbers-counter {
+  padding: 80px 0; }
+  .numbers-counter ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .numbers-counter ul li {
+      margin-left: 100px;
+      margin-right: 100px;
+      padding-top: 20px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      list-style: none;
+      text-align: center; }
+
+.stat-number {
+  color: #ffffff;
+  font-size: 90px;
+  font-family: 'FlamaSemicondensed Light', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+@media screen and (max-width: 991px) {
+  .numbers-counter ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; } }
+
+@media screen and (max-width: 768px) {
+  .numbers-counter {
+    padding: 0 0 80px 0; }
+    .numbers-counter ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+  .number-inc {
+    font-size: 70px; } }
+
+@media screen and (max-width: 425px) {
+  .numbers-counter {
+    padding: 30px 0; }
+  .number-inc {
+    font-size: 65px; } }
+
+@media screen and (max-width: 375px) {
+  .number-inc {
+    font-size: 50px; } }
+
+.stat-number-label {
+  color: #ffffff;
+  font-size: 16px;
+  text-transform: uppercase; }
+
+
