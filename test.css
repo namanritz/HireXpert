@@ -54,7 +54,22 @@ html {
     padding: 5px 10px;
     border-radius: 20px;
     transition: color 0.3s;
+    /* animation: navlist 1s infinite; */
 }
+
+@keyframes navlist {
+    0%{
+        background: linear-gradient(to right, #f5f0f2, #aba5a1,#b8aeb8, #cac9c0);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;;
+    }
+    100%{
+        background: linear-gradient(to right, #f32170, #ff6b08,#cf23cf, #eedd44);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;;
+    }
+}
+
 
 #navbar ul li a:hover {
     color: rgb(104, 97, 97);
@@ -279,6 +294,18 @@ section.contact {
     align-items: center;
 }
 
+.data button{
+    padding: 10px 20px;
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    margin: 10px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
 .numbers-counter {
     padding: 80px 0; }
     .numbers-counter ul {
@@ -401,5 +428,96 @@ section.contact {
 @media (max-width: 375px) {
     .stat-number {
         font-size: 50px;
+    }
+}
+
+.employeedata {
+    background-color: black;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.employeedata .serv {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 200px;
+}
+
+.employeedata .serv h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.employeedata .serv ul {
+    list-style: none;
+}
+
+.employeedata .serv ul li {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.employeedata .salary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.employeedata .salary span {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+}
+
+.employeedata .salary p {
+    color: rgb(79, 70, 70);
+}
+
+.employeedata .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.employeedata .form img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    filter: invert(100%);
+}
+
+.employeedata .form button {
+    padding: 10px 20px;
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.employeedata .form button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .employeedata {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    .employeedata div {
+        align-items: center;
     }
 }
