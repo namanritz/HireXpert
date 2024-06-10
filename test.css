@@ -118,11 +118,16 @@ html {
     justify-content: center;
     padding: 40px 20px;
 }
+#services a{
+    text-decoration: none;
+}
 
 #services .box {
     border: 2px solid white;
     padding: 34px;
     margin: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
     border-radius: 28px;
     background-color: black;
     flex: 1 1 300px;
@@ -255,16 +260,16 @@ section.contact {
     transition: 0.3s;
 }
 
-#cont2 a {
+#cont2 p {
     display: flex;
     align-items: center;
     font-size: 14px;
     color: #ffffff;
     margin: 5px 0;
-    text-decoration: none;
+    /* text-decoration: none; */
 }
 
-#cont2 a img {
+#cont2 p img {
     margin-right: 10px;
     width: 20px;
     height: 20px;
@@ -305,9 +310,13 @@ section.contact {
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
+.data button:hover{
+    background-color: white;
+    color: black;
+}
 
 .numbers-counter {
-    padding: 80px 0; }
+    padding: 50px 0; }
     .numbers-counter ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -360,7 +369,7 @@ section.contact {
 
 @media screen and (max-width: 768px) {
     .numbers-counter {
-    padding: 0 0 80px 0; }
+    padding: 0 0 0px 0; }
     .numbers-counter ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -374,7 +383,7 @@ section.contact {
 
 @media screen and (max-width: 425px) {
     .numbers-counter {
-    padding: 30px 0; }
+    padding: 0px 0; }
     .number-inc {
     font-size: 65px; } }
 
@@ -407,7 +416,7 @@ section.contact {
     }
 
     .numbers-counter {
-        padding: 0 0 80px 0;
+        padding: 0 0 0px 0;
     }
 
     .stat-number {
@@ -417,7 +426,7 @@ section.contact {
 
 @media (max-width: 425px) {
     .numbers-counter {
-        padding: 30px 0;
+        padding: 0px 0;
     }
 
     .stat-number {
@@ -434,7 +443,7 @@ section.contact {
 .employeedata {
     background-color: black;
     color: white;
-    padding: 50px 20px;
+    padding: 150px 20px;
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -446,23 +455,30 @@ section.contact {
 .employeedata .serv {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start; /* Ensures content is aligned to the left */
     max-width: 200px;
+    text-align: left; /* Ensures text is aligned to the left */
 }
 
 .employeedata .serv h2 {
     color: white;
     font-size: 2rem;
     margin-bottom: 10px;
+    text-align: left; /* Ensures the heading text is aligned to the left */
 }
 
 .employeedata .serv ul {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start; /* Ensures the list items are aligned to the left */
 }
 
 .employeedata .serv ul li {
     color: white;
     margin-bottom: 10px;
+    text-align: left; /* Ensures the list item text is aligned to the left */
 }
 
 .employeedata .salary {
@@ -523,7 +539,3 @@ section.contact {
 }
 
 
-    .employeedata div {
-        align-items: center;
-    }
-}
