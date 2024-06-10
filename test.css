@@ -54,22 +54,20 @@ html {
     padding: 5px 10px;
     border-radius: 20px;
     transition: color 0.3s;
-    /* animation: navlist 1s infinite; */
 }
 
 @keyframes navlist {
-    0%{
+    0% {
         background: linear-gradient(to right, #f5f0f2, #aba5a1,#b8aeb8, #cac9c0);
         -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;;
+        -webkit-background-clip: text;
     }
-    100%{
+    100% {
         background: linear-gradient(to right, #f32170, #ff6b08,#cf23cf, #eedd44);
         -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;;
+        -webkit-background-clip: text;
     }
 }
-
 
 #navbar ul li a:hover {
     color: rgb(104, 97, 97);
@@ -80,11 +78,13 @@ html {
     display: flex;
     flex-direction: column;
     padding: 0 20px;
-    height: 100vh;
+    height: 110vh;
     justify-content: center;
     align-items: center;
     background-color: black;
     position: relative;
+    /* margin-bottom: 10px; */
+    /* padding-bottom: 250px; */
 }
 
 #home::before {
@@ -110,6 +110,12 @@ html {
     font-size: 1.5rem;
 }
 
+@media screen and (max-width: 600px) {
+    #home h1 {
+        font-size: x-large;
+    }
+}
+
 /* Services Section */
 #services {
     background-color: black;
@@ -118,7 +124,8 @@ html {
     justify-content: center;
     padding: 40px 20px;
 }
-#services a{
+
+#services a {
     text-decoration: none;
 }
 
@@ -126,8 +133,6 @@ html {
     border: 2px solid white;
     padding: 34px;
     margin: 10px;
-    margin-left: 50px;
-    margin-right: 50px;
     border-radius: 28px;
     background-color: black;
     flex: 1 1 300px;
@@ -246,16 +251,17 @@ section.contact {
 .contactcont li {
     display: flex;
     align-items: center;
-    margin: 10px 0;  /* Added margin for better spacing between items */
+    margin: 10px 0;
 }
 
 .contactcont li img {
     width: 30px;
     height: 30px;
     filter: invert(100%);
-    margin-right: 10px;  /* Increased margin for better spacing */
+    margin-right: 10px;
 }
-.contactcont li img:hover{
+
+.contactcont li img:hover {
     opacity: 0.5;
     transition: 0.3s;
 }
@@ -266,7 +272,6 @@ section.contact {
     font-size: 14px;
     color: #ffffff;
     margin: 5px 0;
-    /* text-decoration: none; */
 }
 
 #cont2 p img {
@@ -290,7 +295,7 @@ section.contact {
 }
 
 /* Data Section */
-.data{
+.data {
     background-color: #000000;
     padding: 100px;
     display: flex;
@@ -299,7 +304,7 @@ section.contact {
     align-items: center;
 }
 
-.data button{
+.data button {
     padding: 10px 20px;
     border: 2px solid white;
     background-color: black;
@@ -310,106 +315,54 @@ section.contact {
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
-.data button:hover{
+
+.data button:hover {
     background-color: white;
     color: black;
 }
 
 .numbers-counter {
-    padding: 50px 0; }
-    .numbers-counter ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
+    padding: 50px 0;
+}
+
+.numbers-counter ul {
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between; }
-    .numbers-counter ul li {
+    justify-content: space-between;
+}
+
+.numbers-counter ul li {
     margin-left: 100px;
     margin-right: 100px;
     padding-top: 20px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     list-style: none;
-    text-align: center; }
+    text-align: center;
+}
 
 .stat-number {
     color: #ffffff;
     font-size: 90px;
     font-family: 'FlamaSemicondensed Light', sans-serif;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center; }
+    justify-content: center;
+}
 
 @media screen and (max-width: 991px) {
-    .numbers-counter ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column; } }
-
-@media screen and (max-width: 768px) {
-    .numbers-counter {
-    padding: 0 0 0px 0; }
-    .numbers-counter ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column; }
-    .number-inc {
-    font-size: 70px; } }
-
-@media screen and (max-width: 425px) {
-    .numbers-counter {
-    padding: 0px 0; }
-    .number-inc {
-    font-size: 65px; } }
-
-@media screen and (max-width: 375px) {
-    .number-inc {
-    font-size: 50px; } }
-
-.stat-number-label {
-    color: #ffffff;
-    font-size: 16px;
-    text-transform: uppercase; }
-
-/* Responsive design */
-@media (max-width: 991px) {
     .numbers-counter ul {
         flex-direction: column;
         align-items: center;
     }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     #navbar ul {
         flex-direction: column;
         gap: 10px;
     }
-    
+
     .contactcont, #cont2, #cont3 {
         width: 90%;
         margin: 0 auto 20px;
@@ -424,7 +377,7 @@ section.contact {
     }
 }
 
-@media (max-width: 425px) {
+@media screen and (max-width: 425px) {
     .numbers-counter {
         padding: 0px 0;
     }
@@ -434,12 +387,19 @@ section.contact {
     }
 }
 
-@media (max-width: 375px) {
+@media screen and (max-width: 375px) {
     .stat-number {
         font-size: 50px;
     }
 }
 
+.stat-number-label {
+    color: #ffffff;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+/* Employeedata Section */
 .employeedata {
     background-color: black;
     color: white;
@@ -455,16 +415,16 @@ section.contact {
 .employeedata .serv {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Ensures content is aligned to the left */
+    align-items: flex-start;
     max-width: 200px;
-    text-align: left; /* Ensures text is aligned to the left */
+    text-align: left;
 }
 
 .employeedata .serv h2 {
     color: white;
     font-size: 2rem;
     margin-bottom: 10px;
-    text-align: left; /* Ensures the heading text is aligned to the left */
+    text-align: left;
 }
 
 .employeedata .serv ul {
@@ -472,13 +432,13 @@ section.contact {
     display: flex;
     flex-direction: column;
     justify-content: left;
-    align-items: flex-start; /* Ensures the list items are aligned to the left */
+    align-items: flex-start;
 }
 
 .employeedata .serv ul li {
     color: white;
     margin-bottom: 10px;
-    text-align: left; /* Ensures the list item text is aligned to the left */
+    text-align: left;
 }
 
 .employeedata .salary {
@@ -538,4 +498,13 @@ section.contact {
     }
 }
 
-
+#grad{
+    background: linear-gradient(to right, #4bacf6, #4bacf6 ,#0863ff);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+}
+#gradh:hover{
+    background: linear-gradient(to right, #4bacf6, #4bacf6 ,#0863ff);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+}
